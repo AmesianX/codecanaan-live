@@ -2,4 +2,5 @@
 Encoding=UTF-8
 Comment=壹學院客戶端程式
 Exec=lxterminal --command "/home/ClientTools/bin/ClientTools"
+Name=壹學院客戶端程式 
 Terminal=true

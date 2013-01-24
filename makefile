@@ -17,12 +17,15 @@ init: clean
 	sudo modprobe squashfs
 	- sudo mount -t squashfs -o loop /tmp/livecd/casper/filesystem.squashfs ~/livecd/squashfs/
 	sudo cp -a ~/livecd/squashfs/* ~/livecd/custom
-	sudo cp /etc/resolv.conf /etc/hosts ~/livecd/custom/etc/
+	sudo cp /etc/resolv.conf /etc/hosts ~/livecd/custom/etc/	
+	#copy sources.list
+	sudo cp /etc/apt/sources.list ~/livecd/custom/etc/apt/sources.list
+	# copy install script
 	- sudo rm ~/livecd/custom/home/install.sh
 	sudo chmod +x install.sh
-	sudo cp /etc/apt/sources.list ~/livecd/custom/etc/apt/sources.list
 	sudo cp install.sh ~/livecd/custom/home/
-	sudo cp auto.desktop ~/livecd/custom/home/
+	
+	sudo rsync -av etc/skel ~/livecd/custom/etc/
 
 	#- rm ~/ClientTools.zip
 	- wget -nc http://assets.codecanaan.com/standalone/ClientTools.zip ~/
