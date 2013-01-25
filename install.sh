@@ -22,7 +22,7 @@ sudo apt-get --yes -f install
 
 rm google-chrome-stable_current_i386.deb
 
-sudo apt-get --yes install Leafpad
+sudo apt-get --yes install leafpad
 sudo apt-get --yes install xinit
 sudo apt-get --yes install ibus
 sudo apt-get --yes install ibus-chewing
