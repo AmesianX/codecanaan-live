@@ -26,7 +26,6 @@ init: clean
 	sudo cp install.sh ~/livecd/custom/home/
 	
 	sudo rsync -av etc/skel ~/livecd/custom/etc/
-
 	#- rm ~/ClientTools.zip
 	- wget -nc http://assets.codecanaan.com/standalone/ClientTools.zip ~/
 	sudo unzip -B ClientTools.zip -d ~/livecd/custom/home/

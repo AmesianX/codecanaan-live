@@ -22,6 +22,7 @@ sudo apt-get --yes -f install
 
 rm google-chrome-stable_current_i386.deb
 
+sudo apt-get --yes install Leafpad
 sudo apt-get --yes install xinit
 sudo apt-get --yes install ibus
 sudo apt-get --yes install ibus-chewing
@@ -51,7 +52,12 @@ sudo dpkg -i petitechezscheme_8.4-2_i386.deb
 rm PetiteChezScheme-8.4-1.i386.rpm
 rm petitechezscheme_8.4-2_i386.deb
 
+
+
+
 sudo apt-get --yes purge alien
+
+sudo apt-get --yes purge xscreensaver
 
 
 
@@ -74,7 +80,7 @@ sudo apt-get --yes purge alien
 #sudo apt-get install nodejs npm 
 
 
-
+apt-get --yes autoremove
 apt-get clean
 rm -rf /tmp/*
 rm -f /etc/hosts /etc/resolv.conf
